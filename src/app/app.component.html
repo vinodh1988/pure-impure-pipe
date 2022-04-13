@@ -1,0 +1,11 @@
+<input type="text"   [(ngModel)]="searchTerm"  placeholder="Enter name" >
+<button (click)="changeProperty()">change by Property</button>
+<button (click)="changeReference()">change by Reference</button>
+<hr>
+<ul>
+	<li *ngFor="let user of users | filter:searchTerm">{{user.name}}</li>
+</ul>
+<button (click)="toggle()">Send new property</button>
+<button (click)="toggleSomething()">Send Something Else</button>
+<hr/>
+<app-child [data]="data" [something]="something"></app-child>
